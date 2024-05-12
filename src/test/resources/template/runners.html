@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futóverseny résztvevői</title>
+</head>
+<body>
+    <h1>Futóverseny résztvevői</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>Életkor</th>
+                <th>Nem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- A résztvevők adatainak dinamikus megjelenítése -->
+            <tr th:each="runner : ${runners}">
+                <td th:text="${runner.name}"></td>
+                <td th:text="${runner.age}"></td>
+                <td th:text="${runner.gender}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
